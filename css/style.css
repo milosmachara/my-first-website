@@ -203,50 +203,8 @@ header {
 
 /*------MAIN------*/
 
-body {
-  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-    url(/images/skillphoto.jpg);
-  background-attachment: fixed;
-}
 
-.skills {
-  margin: 20px auto;
-  padding: 20px auto;
-}
-.skillsh2 {
-  font-family: sans-serif;
-  color: #fff;
-  text-align: center;
-  margin-top: 20px;
-  font-size: 40px;
-  margin-bottom: 0;
-}
 
-.skill-img img {
-  margin-top: 0;
-  margin-left: 37%;
-  width: 100%;
-  max-width: 80px;
-  height: auto;
-  border-radius: 30%;
-  margin-bottom: 20px;
-  opacity: 0.7;
-}
-
-.skill-img img:hover {
-  cursor: pointer;
-  transform: scale(1.4);
-  opacity: 1;
-  transition: 0.7s;
-}
-
-.skills p {
-  font-family: sans-serif;
-  color: #fff;
-  font-size: 20px;
-  margin-left: 20px;
-  margin-right: 20px;
-}
 
 /*------FOOTER------*/
 
