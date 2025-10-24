@@ -1,5 +1,9 @@
 /* RESET / základ */
-* { box-sizing: border-box; margin: 0; padding: 0; }
+* { 
+  box-sizing: border-box; 
+  margin: 0; 
+  padding: 0; 
+}
 html, body { height: 100%; }
 body {
   font-family: Arial, sans-serif;
@@ -17,6 +21,7 @@ header {
   height: 100vh;
   background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)), url('/images/pedro.jpg') center/cover no-repeat;
   overflow: hidden;
+  background-attachment: fixed;
 }
 
 /* logo */
@@ -89,9 +94,11 @@ header {
   font-size: 24px; 
   z-index: 50; 
 }
-.frontend { 
+.eliot { 
   color: hotpink; 
-  font-weight: 700; 
+  font-size: large;
+  font-weight: 10px; 
+  opacity: 0.6;
 }
 
 /* PROFILE PHOTO - už NEFIX/NEABSOLUTE, ale v rámci Header (sa nebude prelínať do main) */
@@ -116,13 +123,18 @@ header {
 
 /* MAIN (aby footer sedel pod obsahom) */
 main {
-  background: #fff;
-  position: relative;
-  z-index: 1;
-  padding: 60px 0;
+  background-color: #fff;
+  position:relative;
+  z-index:1;
+  padding:60px;
 }
 
 /* ABOUT ME layout */
+
+.About-me .heading-about-me h2{
+  text-align: center;
+  font-size: 40px;
+}
 .pc-img { 
   display: flex; 
   gap: 30px; 
@@ -136,7 +148,14 @@ main {
   width: 100%; 
   height: auto; 
   border-radius: 8px; 
-  box-shadow: 7px 7px 10px rgba(0,0,0,0.35); }
+  box-shadow: 7px 7px 10px rgba(0,0,0,0.35); 
+}
+
+.skills-img {
+ 
+}
+
+
 
 /* FOOTER - bežný blok (nie fixed/absolute) */
 .footer-page {
