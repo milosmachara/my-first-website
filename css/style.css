@@ -1,237 +1,197 @@
-/* html {
-  box-sizing: border-box;
-}
-*,
-*:before,
-*:after {
-  box-sizing: inherit;
-} */
-
+/* RESET / základ */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { height: 100%; }
 body {
+  font-family: Arial, sans-serif;
   overflow-x: hidden;
+  background: #fff;
+  color: #222;
 }
 
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
+/* kontajner */
+.row { max-width: 1140px; margin: 0 auto; padding: 0 20px; }
 
-.row {
-  max-width: 1140px;
-  margin: 0px auto;
-}
-
-/*------HEADER------*/
-
+/* HEADER */
 header {
-  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-    url(/images/pedro.jpg);
-  background-size: cover;
-  height: 100vh;
-  background-attachment: fixed;
   position: relative;
+  height: 100vh;
+  background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)), url('/images/pedro.jpg') center/cover no-repeat;
   overflow: hidden;
 }
 
+/* logo */
 #logo img {
-  position: absolute;
-  width: 100px;
-  height: auto;
-  border-radius: 30%;
-  top: 4%;
-  left: 2%;
   position: fixed;
-  z-index: 60;
+  top: 20px;
+  left: 20px;
+  width: 80px;
+  height: auto;
+  border-radius: 12px;
+  z-index: 0;
   opacity: 0.7;
-  transition: transform 1s ease, box-shadow 1s ease; /*aby sa mi logo plynulo vrátilo*/
-  cursor: pointer;
+  transition: transform .6s ease, opacity .4s ease;
+}
+#logo img:hover { 
+  transform: scale(1.3); 
+  opacity: 1; 
 }
 
-#logo img:hover {
-  cursor: pointer;
-  opacity: 0.9;
-  transform: scale(1.4);
-  transition: 0.8s;
-  z-index: 200;
-}
-
-/* -----NAV----- */
+/* NAV */
 .navbar {
   position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
-  height: 50px;
-  background-color: rgba(0, 0, 0, 0.7);
-  z-index: 50;
+  height: 56px;
+  background: rgba(0,0,0,0.6);
+  z-index: 70;
+  display: flex;
+  align-items: center;
 }
-
 .navbar ul {
-  float: right;
-  position: fixed;
-  margin-top: 13px;
-  margin-left: 50%;
   list-style: none;
+  margin-left: auto;
+  margin-right: 40px;
+  display: flex;
+  gap: 18px;
+  align-items: center;
 }
-
 .navbar ul li a {
-  text-decoration: none;
-  font-size: 20px;
-  margin: 7px auto;
-  padding: 20px 40px;
   color: #fff;
-  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  opacity: 0.6;
+  text-decoration: none;
+  font-size: 16px;
+  padding: 10px 12px;
+  opacity: 0.85;
+  transition: color .25s, opacity .25s;
+}
+.navbar ul li a:hover { color: #ff4d00; opacity: 1; }
+
+/* WELCOME text */
+.welcome { 
+  position: absolute; 
+  top: 28%; left: 5%; color: #fff; z-index: 50; 
+}
+.welcome .hello h3 { 
+  font-size: 28px; 
+  margin-bottom: 6px; 
+}
+.welcome .name h1 { 
+  font-size: 64px; 
+  line-height: 1; 
+  margin-bottom: 8px; 
 }
 
-.navbar a:hover {
-  opacity: 0.5;
-  transition: 0.5s;
-  color: #ff4d00;
+/* iam */
+.iam { 
+  position: absolute; 
+  top: 44%; left: 5%; 
+  color: #fff; 
+  font-size: 24px; 
+  z-index: 50; 
 }
+.frontend { 
+  color: hotpink; 
+  font-weight: 700; 
+}
+
+/* PROFILE PHOTO - už NEFIX/NEABSOLUTE, ale v rámci Header (sa nebude prelínať do main) */
 .profile-photo {
   position: absolute;
   right: 50px;
   top: 100px;
-  overflow: hidden;
-  
-}
-
-.profile-photo img {
+  z-index: 40;
   width: 35vw;
+  max-width: 420px;
+  overflow: hidden;
+  border-radius: 6px;
+  box-shadow: 0 8px 18px rgba(0,0,0,0.6);
+}
+.profile-photo img {
+  display: block;
+  width: 100%;
   height: auto;
- 
   -webkit-mask-image: radial-gradient(circle, rgba(0,0,0,1) 20%, rgba(0,0,0,0) 80%);
   mask-image: radial-gradient(circle, rgba(0,0,0,1) 20%, rgba(0,0,0,0) 80%);
 }
 
-/* -----HEADER TEXT-------*/
-.name {
-  position: relative; /* Aby sa mohol pohybovať */
-  left: -100%; /* Začiatok mimo obrazovky */
-  opacity: 0; /* Skrytý na začiatku */
-  animation: slideIn 1.5s ease-out forwards;
-}
-
-/* -----ANIMATION-------*/
-
-@keyframes slideIn {
-  0% {
-    left: -100%;
-    opacity: 0;
-  }
-  100% {
-    left: 0;
-    opacity: 1;
-  }
-}
-
-.iam {
+/* MAIN (aby footer sedel pod obsahom) */
+main {
+  background: #fff;
   position: relative;
-  opacity: 0;
-  animation: bounceIn 2s ease-out forwards;
+  z-index: 1;
+  padding: 60px 0;
 }
 
-@keyframes bounceIn {
-  0% {
-    transform: translateY(-100px);
-    opacity: 0;
-  }
-  50% {
-    transform: translateY(10px);
-    opacity: 1;
-  }
-  70% {
-    transform: translateY(-5px);
-  }
-  100% {
-    transform: translateY(0);
-    opacity: 1;
-  }
+/* ABOUT ME layout */
+.pc-img { 
+  display: flex; 
+  gap: 30px; 
+  align-items: 
+  flex-start; 
 }
-
-.welcome {
-  z-index: 100;
-  color: #fff;
-  position: absolute;
-  top: 30%;
-  left: 5%;
-  font-family: sans-serif;
+.pc-img .col { 
+  flex: 1; 
 }
+.pc-img img { 
+  width: 100%; 
+  height: auto; 
+  border-radius: 8px; 
+  box-shadow: 7px 7px 10px rgba(0,0,0,0.35); }
 
-.hello {
-  font-size: 30px;
-}
-
-.name {
-  font-size: 45px;
-  z-index: 100;
-}
-
-.iam {
-  color: #fff;
-  position: absolute;
-  top: 50%;
-  left: 5%;
-  font-family: sans-serif;
-  font-size: 30px;
-  z-index: 100;
-}
-.frontend {
-  color: hotpink;
-  font-weight: bold;
-  z-index: 100;
-}
-
-/* -----BUTTONS-------*/
-
-/*------ABOUT ME------*/
-.pc-img img {
-    width: 90%;  /* vždy dávať na obrázky aby sa mi pekne uložili/roztiahli*/
-    margin-left: 10px;
-    height: auto;
-    border-radius: 10px;
-    box-shadow: 7px 7px 10px black;
-  
-    
-}
-
-
-/*MEDIA QUERIES*/
-
-
-
-
-
-/*------FOOTER------*/
-
- .footer-page {
+/* FOOTER - bežný blok (nie fixed/absolute) */
+.footer-page {
   position: relative;
-  background: gray;
-  margin-top: 50px;
+  background: rgba(0,0,0,0.85);
+  color: #fff;
+  margin-top: 40px;
   padding: 20px 0;
-  opacity: 0.7;
-  
 }
+.footer-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+.footer-text { text-align: right; font-size: 14px; opacity: 0.9; }
 
-.footer-text {
-  text-align: center;
-  color: #fff;
-} 
+/* sociálne ikony vľavo */
+.footer-page .social-buttons { 
+  display: flex; 
+  gap: 12px; 
+  align-items: center; 
+}
 .footer-page .social-buttons img {
-  width: 20px;  /* zmeň veľkosť podľa vkusu, napr. 24px alebo 32px */
-  height: 20px;
-  transition: transform 0.3s ease;
-  border-radius: 30%;
-}
-/*------STOP CLEARFIX------*/
-
-.clearfix {
-  zoom: 1;
-}
-.clearfix:after {
-  content: ".";
-  clear: both;
+  width: 22px;
+  height: 22px;
   display: block;
-  height: 0;
-  visibility: hidden;
+  border-radius: 6px;
+  opacity: 0.9;
+  transition: transform .25s ease, opacity .25s ease;
+}
+.footer-page .social-buttons img:hover { 
+  transform: scale(1.15); 
+  opacity: 1; 
+}
+
+/* RESPONZIVITA */
+@media (max-width: 900px) {
+  .welcome .name h1 { 
+    font-size: 42px; 
+  }
+  .profile-photo {
+     width: 45vw; 
+     right: 20px; 
+     top: 140px; 
+    }
+  .footer-inner { 
+    flex-direction: column; 
+    text-align: center; 
+    gap: 12px; 
+  }
+  .footer-text { 
+    text-align: center;
+   }
+  .pc-img { 
+    flex-direction: column; 
+  }
 }
