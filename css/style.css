@@ -85,6 +85,7 @@ header {
   margin-bottom: 6px; 
 }
 .welcome .name h1 { 
+  opacity: 0.5;
   font-size: 64px; 
   line-height: 1; 
   margin-bottom: 8px; 
@@ -93,6 +94,7 @@ header {
 /********************* iam *********************/
 .iam { 
   position: absolute; 
+  margin-top: 20px;
   top: 44%; left: 5%; 
   color: #fff; 
   font-size: 24px; 
@@ -137,11 +139,13 @@ main {
 /********************* ABOUT ME layout ************************/
 
 .About-me .heading-about-me h2{
+  font-family: Georgia, 'Times New Roman', Times, serif;
   text-align: center;
   font-size: 40px;
 }
 
 .text-about-me {
+  font-family: Georgia, 'Times New Roman', Times, serif;
   margin-right: 20px;
 }
 .pc-img { 
@@ -163,17 +167,26 @@ main {
 
 
 /*****************Skills*****************/
+.col {
+  display: flex;
+  flex-direction: column; /* obrázok nad textom */
+  align-items: center;    /* vycentruje horizontálne */
+  text-align: center;     /* aby aj text bol centrovaný */
+}
 .skills {
    background: linear-gradient(rgba(0,0,0,0.9),rgba(0,0,0,0.9)), url(../images/pc.jpg);
     background-attachment: fixed;
+    background-size: cover;
     }
 
  .heading-skills h1 {
+  opacity: 0.5;
   text-align: center;
   color: #fff;
   
  }
  .my-skills-row {
+  text-align: center;
   margin-left: 20px;
   display: flex;
  }
@@ -181,42 +194,49 @@ main {
  color: #fff;
  }
 .photo-skills {
-  margin-top: 10px;
-  margin-bottom: 60px;
+  text-align: center;
+  /*margin-top: 10px;
+  margin-bottom: 60px;*/
 }
 .photo-skills img {
-  width: 150px;
-  float: left;
-  margin-left: 60px;
+  opacity: 0.5;
+  width: 45%;
+  height: auto;
+  margin: 0 auto 10px;
+  float: none;
 }
 .photo-skills-SQL {
-  margin-top: 10px;
-  margin-bottom: 60px;
+  text-align: center;
 }
  
 .photo-skills-SQL img {
-  width: 60px;
-  float: left;
-  margin-left: 100px;
+ width: 18%;
+ height: auto;
+ margin: 0 auto 10px;
+ float: none;
+ opacity: 0.5;
 }
 .photo-skills-GIT {
-  margin-top: 10px;
-  margin-bottom: 60px;
+text-align: center;
 }
 .photo-skills-GIT img {
-  width: 70px;
-   float: left;
-  margin-left: 95px;
-  border-radius: 30%;
+ width: 24%;
+ border-radius: 30%;
+ height: auto;
+ margin: 0 auto 10px;
+ float: none;
+ opacity: 0.5;
 }
+
 .photo-skills-testing {
-  margin-top: 10px;
-  margin-bottom: 60px;
+  text-align: center;
 }
  .photo-skills-testing img {
- width: 60px;
-  float: left;
-  margin-left: 100px;
+ width: 18%;
+ height: auto;
+ margin: 0 auto 10px;
+ float: none; 
+ opacity: 0.5;
 }
   
   
@@ -287,11 +307,16 @@ main {
 @media (max-width: 768px) {
   .welcome .name h1 { 
     font-size: 42px; 
+    margin-bottom: 5px;
   }
   .profile-photo {
-     width: 45vw; 
+    float: right;
+    width: 115px;
+    height: auto;
+    
+    /*width: 45vw; 
      right: 20px; 
-     top: 140px; 
+     top: 140px; */
     }
 
   .pc-img { 
