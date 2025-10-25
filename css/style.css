@@ -12,14 +12,14 @@ body {
   color: #222;
 }
 
-/* kontajner */
+/******************kontajner **************/
 .row { 
   max-width: 1140px; 
   margin: 0 auto; 
   padding: 0 20px; 
 }
 
-/* HEADER */
+/******************* HEADER ***************/
 header {
   position: relative;
   height: 100vh;
@@ -28,7 +28,7 @@ header {
   background-attachment: fixed;
 }
 
-/* logo */
+/******************* logo ****************/
 #logo img {
   position: fixed;
   top: 20px;
@@ -45,7 +45,7 @@ header {
   opacity: 1; 
 }
 
-/* NAV */
+/************************ NAV ***************************/
 .navbar {
   position: fixed;
   top: 0;
@@ -75,7 +75,7 @@ header {
 }
 .navbar ul li a:hover { color: #ff4d00; opacity: 1; }
 
-/* WELCOME text */
+/************************** WELCOME text ****************************/
 .welcome { 
   position: absolute; 
   top: 28%; left: 5%; color: #fff; z-index: 50; 
@@ -90,7 +90,7 @@ header {
   margin-bottom: 8px; 
 }
 
-/* iam */
+/********************* iam *********************/
 .iam { 
   position: absolute; 
   top: 44%; left: 5%; 
@@ -125,7 +125,7 @@ header {
   mask-image: radial-gradient(circle, rgba(0,0,0,1) 10%, rgba(0,0,0,0) 70%);
 }
 
-/* MAIN (aby footer sedel pod obsahom) */
+/********** MAIN (aby footer sedel pod obsahom) *****************/
 main {
   background-color: #fff;
   position:relative;
@@ -134,7 +134,7 @@ main {
   
 }
 
-/* ABOUT ME layout */
+/********************* ABOUT ME layout ************************/
 
 .About-me .heading-about-me h2{
   text-align: center;
@@ -160,7 +160,9 @@ main {
   border-radius: 8px; 
   box-shadow: 7px 7px 10px rgba(0,0,0,0.35); 
 }
-/*Skills*/
+
+
+/*****************Skills*****************/
 .skills-img {
    background: linear-gradient(rgba(0,0,0,0.9),rgba(0,0,0,0.9)), url(../images/pc.jpg);
     background-attachment: fixed;
@@ -170,6 +172,7 @@ main {
  .heading-skills {
   text-align: center;
   color: #fff;
+
  }
  .my-skills-row {
   color: #fff;
@@ -182,7 +185,7 @@ main {
 .photo-skills img {
   width: 150px;
   float: left;
-  margin-left: 55px;
+  margin-left: 60px;
 }
 .photo-skills-SQL {
   margin-top: 10px;
@@ -192,7 +195,7 @@ main {
 .photo-skills-SQL img {
   width: 60px;
    float: left;
-  margin-left: 95px;
+  margin-left: 100px;
 }
 .photo-skills-GIT {
   margin-top: 10px;
@@ -204,7 +207,18 @@ main {
   margin-left: 95px;
   border-radius: 30%;
 }
- 
+.photo-skills-testing {
+  margin-top: 10px;
+  margin-bottom: 60px;
+}
+ .photo-skills-testing img {
+  width: 67px;
+   float: left;
+  margin-left: 100px;
+  position: absolute;
+  top: 67.5%;
+  
+}
  
    
 
@@ -228,7 +242,7 @@ main {
   font-size: 14px; 
   opacity: 0.9; }
 
-/* sociálne ikony vľavo */
+/************* sociálne ikony vľavo *************/
 .footer-page .social-buttons { 
   display: flex; 
   gap: 12px; 
@@ -247,7 +261,7 @@ main {
   opacity: 1; 
 }
 
-/* RESPONZIVITA */
+/***************** RESPONSIVITY ****************/
 @media (max-width: 900px) {
   .welcome .name h1 { 
     font-size: 42px; 
