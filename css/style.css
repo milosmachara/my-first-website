@@ -201,6 +201,7 @@ main {
   opacity: 1;
   transform: translateY(0);
 }
+
 .my-skills-row .col:nth-child(1) { transition-delay: 0s; }
 .my-skills-row .col:nth-child(2) { transition-delay: 0.2s; }
 .my-skills-row .col:nth-child(3) { transition-delay: 0.4s; }
@@ -294,6 +295,7 @@ text-align: center;
     overflow: hidden;       /*keď mi preteče obrázok takto to dám doporiadku, to čo pretieklo skry*/
     height: 300px;
     border-radius: 10px;
+   
     
 }
 
@@ -302,6 +304,7 @@ text-align: center;
   height: 300px;
   transform: scale(1.15); /* transform, zvačšenie o 1,15*/
   transition: transform .6s ease, opacity .4s ease;
+  
 }
 .photo-segment img:hover {
     transition: transform 0.5s, opacity 0.5s; 
@@ -309,18 +312,24 @@ text-align: center;
     opacity: 1;
     }
 
+    .gallery {
+       padding-bottom: 20px;
+    }
+
+    
   
 
 /* FOOTER - bežný blok (nie fixed/absolute) */
 .footer-page {
-   background:#222;
+   background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('/images/pedro.jpg') center/cover no-repeat;
     color: #fff;
     opacity: 0.7;
+    border-top: 10px solid black;
   }
     
 .social {
-    text-align: center;
-    margin: 10px;
+    text-align: left;
+  
 
 }
 
@@ -328,7 +337,7 @@ text-align: center;
 .social p a:visited {
     text-decoration: none;
     color: antiquewhite;
-    font-size: 25px;
+    font-size: 15px;
     letter-spacing: 2px;
     display: inline-block;
     transition: transform 0.7s ease;
@@ -349,6 +358,7 @@ text-align: center;
 .footer-text{
     text-align: center;
 }
+
 
   /*position: relative;
   background: rgba(0, 0, 0, 0.16);
