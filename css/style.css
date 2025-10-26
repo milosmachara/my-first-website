@@ -23,7 +23,7 @@ body {
 header {
   position: relative;
   height: 100vh;
-  background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)), url('/images/pedro.jpg') center/cover no-repeat;
+  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('/images/pedro.jpg') center/cover no-repeat;
   overflow: hidden;
   background-attachment: fixed;
 }
@@ -68,6 +68,8 @@ header {
 .navbar ul li a {
   color: #fff;
   text-decoration: none;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  text-transform: uppercase;
   font-size: 16px;
   padding: 10px 12px;
   opacity: 0.85;
@@ -129,7 +131,10 @@ header {
 
 /********** MAIN (aby footer sedel pod obsahom) *****************/
 main {
-  background-color:#f6f4e1;
+ /* background-color:#f6f4e1;*/
+ background: linear-gradient(rgba(0,0,0,0.9),rgba(0,0,0,0.9)), url(../images/pc.jpg);
+    background-attachment: fixed;
+    background-size: cover;
   position:relative;
   z-index:1;
   
@@ -139,20 +144,24 @@ main {
 /********************* ABOUT ME layout ************************/
 
 .About-me .heading-about-me h2{
+  padding: 25px 0 20px 0;
   font-family: Georgia, 'Times New Roman', Times, serif;
   text-align: center;
   font-size: 40px;
+  color: #fff;
 }
 
 .text-about-me {
-  font-family: Georgia, 'Times New Roman', Times, serif;
   margin-right: 20px;
+  color: #fff;
+  line-height: 1.8;
 }
 .pc-img { 
   display: flex; 
   gap: 30px; 
   align-items: 
   flex-start; 
+
 }
 .pc-img .col { 
   flex: 1; 
@@ -163,6 +172,8 @@ main {
   height: auto; 
   border-radius: 8px; 
   box-shadow: 7px 7px 10px rgba(0,0,0,0.35); 
+   -webkit-mask-image: radial-gradient(circle, rgba(0,0,0,1) 10%, rgba(0,0,0,0) 70%);
+  mask-image: radial-gradient(circle, rgba(0,0,0,1) 10%, rgba(0,0,0,0) 70%);
 }
 
 
@@ -174,15 +185,19 @@ main {
   text-align: center;     /* aby aj text bol centrovaný */
 }
 .skills {
-   background: linear-gradient(rgba(0,0,0,0.9),rgba(0,0,0,0.9)), url(../images/pc.jpg);
+   background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(../images/pedro.jpg);
     background-attachment: fixed;
     background-size: cover;
     }
 
- .heading-main-skills {
-  opacity: 0.5;
+ .heading-main-skills{
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  text-transform: uppercase;
+  padding: 25px 0 20px 0;
+  font-size: 25px;
   text-align: center;
   color: #fff;
+  
   
  }
  .my-skills-row {
@@ -191,7 +206,10 @@ main {
   display: flex;
  }
  .my-skills-row p {
- color: #fff;
+ /*color: #fff;*/
+ color: aliceblue;
+ line-height: 1.8;
+
  }
 .photo-skills {
   text-align: center;
@@ -199,7 +217,7 @@ main {
   margin-bottom: 60px;*/
 }
 .photo-skills img {
-  opacity: 0.5;
+  opacity: 0.7;
   width: 45%;
   height: auto;
   margin: 0 auto 10px;
@@ -214,7 +232,7 @@ main {
  height: auto;
  margin: 0 auto 10px;
  float: none;
- opacity: 0.5;
+ opacity: 0.9;
 }
 .photo-skills-GIT {
 text-align: center;
@@ -225,7 +243,7 @@ text-align: center;
  height: auto;
  margin: 0 auto 10px;
  float: none;
- opacity: 0.5;
+ opacity: 0.7;
 }
 
 .photo-skills-testing {
@@ -236,13 +254,17 @@ text-align: center;
  height: auto;
  margin: 0 auto 10px;
  float: none; 
- opacity: 0.5;
+ opacity: 0.7;
 }
 
 /********************* CERTIFIKATES*****************/
 .heading-main-certifikates {
+  font-size: 20px;
+  text-transform: uppercase;
+  padding: 25px 0 20px 0;
   text-align: center;
   font-family: Georgia, 'Times New Roman', Times, serif;
+  color: #fff;
 }
 .photo-segment li {
     list-style-type: none;  /*takto zruším označenie zoznamu, bodky atď*/
@@ -265,8 +287,6 @@ text-align: center;
     }
 
   
-
-
 
 /* FOOTER - bežný blok (nie fixed/absolute) */
 .footer-page {
