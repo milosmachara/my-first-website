@@ -215,10 +215,10 @@ main {
   transform: translateY(0);
 }
 
-.my-skills-row .col:nth-child(1) { transition-delay: 0s; }
-.my-skills-row .col:nth-child(2) { transition-delay: 0.2s; }
-.my-skills-row .col:nth-child(3) { transition-delay: 0.4s; }
-.my-skills-row .col:nth-child(4) { transition-delay: 0.6s; }
+.my-skills-row .col:nth-child(1) { transition-delay: 0.2s; }
+.my-skills-row .col:nth-child(2) { transition-delay: 0.4s; }
+.my-skills-row .col:nth-child(3) { transition-delay: 0.6s; }
+.my-skills-row .col:nth-child(4) { transition-delay: 0.8s; }
 
  
 
