@@ -185,12 +185,20 @@ main {
   padding-right: 20px;
 }
 .pc-img {
-  display: flex;
+  /*display: flex;
   gap: 30px;
-  align-items: flex-start;
+  align-items: flex-start;*/
+  display: flex; /* aktivuje grid */
+  justify-content: center; /* 2 stĺpce - obrázok + text */
+  gap: 30px; /* medzera medzi nimi */
+  align-items: center; /* zarovná ich zvislo */
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 15px;
+  flex-wrap: wrap;
 }
 .pc-img .col {
-  flex: 1;
+  flex: 1 1 45%;
 }
 .pc-img img {
   width: 100%;
@@ -397,7 +405,33 @@ main {
      top: 140px; */
   }
 
+  /* Oprava sekcie About me */
   .pc-img {
-    flex-direction: column;
+    display: flex; /* iba flexbox */
+    flex-direction: column; /* zoradí pod seba */
+    align-items: center; /* vycentruje horizontálne */
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    width: 100% !important;
+  }
+
+  .pc-img .col {
+    flex: 1 1 100%; /* každý zaberie celú šírku */
+    width: 100%;
+    padding: 0 10px;
+    margin: 0;
+  }
+
+  .pc-img img {
+    width: 100%;
+    margin: 0 auto 20px;
+  }
+
+  .text-about-me {
+    text-align: center;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0 10px;
   }
 }
