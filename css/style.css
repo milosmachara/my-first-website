@@ -399,10 +399,6 @@ main {
     float: right;
     width: 115px;
     height: auto;
-
-    /*width: 45vw; 
-     right: 20px; 
-     top: 140px; */
   }
 
   /* Oprava sekcie About me */
@@ -429,9 +425,53 @@ main {
   }
 
   .text-about-me {
-    text-align: center;
+    text-align: justify;
     max-width: 100%;
     margin: 0 auto;
-    padding: 0 10px;
+    padding: 0px 10px;
+    padding-bottom: 30px;
+  }
+  .my-skills-row {
+    display: flex; /* iba flexbox */
+    flex-direction: column; /* zoradí pod seba */
+    align-items: center; /* vycentruje horizontálne */
+    text-align: justify;
+    padding: 0;
+    margin: 0;
+    width: 100% !important;
+  }
+  .my-skills-row img {
+    width: 20%;
+  }
+  .photo-skills img {
+    width: 35%;
+  }
+  .my-skills-row .col {
+    width: 100%;
+    margin-bottom: 40px;
+  }
+  .my-skills-row p {
+    text-align: justify;
+    padding: 0 15px;
+  }
+
+  .photo-segment li {
+    display: flex; /* iba flexbox */
+    flex-direction: column; /* zoradí pod seba */
+    align-items: center; /* vycentruje horizontálne */
+    text-align: justify;
+    padding: 0;
+    margin: 0;
+    width: 100% !important;
+    margin-bottom: 20px;
+  }
+
+  .photo-segment img:hover {
+    transition: none;
+    transform: none;
+  }
+  .photo-segment img {
+    transition: none;
+    transform: none;
   }
 }
