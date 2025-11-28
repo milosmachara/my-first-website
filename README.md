@@ -6,20 +6,20 @@ Projekt ešte nie je vo finálnej verzii, postupne pridávam nové sekcie, dizaj
 
 🚀 **Funkcie**
 
--Prehľadné sekcie o mne
+- Prehľadné sekcie o mne
 
--Zoznam mojich zručností (skills)
+- Zoznam mojich zručností (skills)
 
--Responzívny dizajn
+- Responzívny dizajn
 
--Jednoduchá navigácia 
+- Jednoduchá navigácia 
 
 🛠 **Použité technológie**
 
--HTML5 – štruktúra stránky
+- HTML5 – štruktúra stránky
 
--CSS3 – štýlovanie a responzivita
+- CSS3 – štýlovanie a responzivita
 
--JavaScript – interaktivita
+- JavaScript – interaktivita
 
--Git & GitHub – verzovanie a hosting
+- Git & GitHub – verzovanie a hosting
