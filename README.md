@@ -1,23 +1,24 @@
-🧑‍💻**Moja osobná web stránka**
+# 🧑‍💻 My Personal Website
 
-Tento projekt je moja osobná webová stránka, kde predstavujem seba, svoje zručnosti, projekty a cestu v IT.
-Web je postavený pomocou HTML, CSS a JavaScriptu a slúži ako môj online profil a portfólio.
-**Projekt ešte nie je vo finálnej verzii, postupne pridávam nové sekcie, dizajn, animácie a funkcionalitu.**
+This project is my personal website where I present myself, my skills, projects, and my journey in IT.  
+The website is built using HTML, CSS, and JavaScript, and serves as my online profile and portfolio.  
+**The project is not in its final version yet — I am gradually adding new sections, design improvements, animations, and functionality.**
 
-🚀 **Funkcie**
+## 🚀 Features
 
-- Prehľadné sekcie o mne
+- Clear and organized "About Me" section  
+- List of my skills  
+- Simple and intuitive navigation  
 
-- Zoznam mojich zručností (skills)
+## 🛠 Technologies Used
 
-- Jednoduchá navigácia 
+- **HTML5** – page structure  
+- **CSS3** – styling and responsiveness  
+- **JavaScript** – interactivity  
+- **Git & GitHub** – version control and hosting  
 
-🛠 **Použité technológie**
 
-- HTML5 – štruktúra stránky
 
-- CSS3 – štýlovanie a responzivita
 
-- JavaScript – interaktivita
 
-- Git & GitHub – verzovanie a hosting
+
